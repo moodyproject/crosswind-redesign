@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crosswind Mechanical | Heating, Cooling & Refrigeration | Southeast Michigan</title>
+<meta name="description" content="Crosswind Mechanical is Southeast Michigan’s trusted heating, cooling, and commercial refrigeration contractor. Family owned. Licensed and certified. Emergency service available. Call (734) 322-8052.">
+<meta property="og:title" content="Crosswind Mechanical | Heating, Cooling & Refrigeration">
+<meta property="og:description" content="Southeast Michigan’s family-owned HVAC and commercial refrigeration contractor. Free consultations. Emergency service available. Call (734) 322-8052.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='%23141b23'/%3E%3Cpath d='M8 17h20a6 6 0 1 0-6-6' stroke='%23a8cddd' stroke-width='3.4' stroke-linecap='round' fill='none'/%3E%3Cpath d='M8 26h28a6 6 0 1 1-6 6' stroke='%23e4571f' stroke-width='3.4' stroke-linecap='round' fill='none'/%3E%3Cpath d='M8 35h14a5 5 0 1 1-5 5' stroke='%23f3efe7' stroke-width='3.4' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800;900&family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Chivo+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#141b23;
+  --ink-2:#1d2733;
+  --ink-3:#28323f;
+  --paper:#f3efe7;
+  --paper-2:#eae4d8;
+  --bone:#fbf9f4;
+  --heat:#e4571f;
+  --heat-deep:#b83e10;
+  --cool:#3d84ab;
+  --cool-ice:#a8cddd;
+  --line:rgba(20,27,35,.14);
+  --line-light:rgba(243,239,231,.16);
+  --display:'Big Shoulders Display',sans-serif;
+  --body:'Libre Franklin',sans-serif;
+  --mono:'Chivo Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--heat);color:#fff}
+h1,h2,h3,.disp{font-family:var(--display);text-transform:uppercase;line-height:.92;letter-spacing:.005em}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+.mono{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
+section[id],#top{scroll-margin-top:86px}
+::placeholder{color:rgba(243,239,231,.35)}
+:focus-visible{outline:2px solid var(--heat);outline-offset:3px}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  html{scroll-behavior:auto}
+  .sr,.rise{opacity:1;transform:none}
+}
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+
+/* ---------- grain ---------- */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.5;mix-blend-mode:multiply;
+background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* ---------- top strip ---------- */
+.strip{background:var(--ink);color:var(--paper);border-bottom:1px solid var(--line-light)}
+.strip-in{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:9px 0}
+.strip .mono{font-size:.66rem;opacity:.85}
+.strip-right{display:flex;gap:22px;align-items:center}
+.strip .dot{width:6px;height:6px;border-radius:50%;background:var(--heat);display:inline-block;margin-right:7px;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+@media(max-width:760px){.strip-right span:first-child{display:none}}
+@media(max-width:600px){.strip-right{display:none}.strip-in{justify-content:center}.strip .mono{white-space:nowrap;font-size:.58rem}}
+
+/* ---------- nav ---------- */
+header.nav{position:sticky;top:0;z-index:100;background:var(--ink);color:var(--paper);border-bottom:1px solid var(--line-light)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:24px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo svg{width:42px;height:42px;flex-shrink:0}
+.logo-name{font-family:var(--display);font-weight:800;font-size:1.5rem;text-transform:uppercase;letter-spacing:.02em;line-height:.9}
+.logo-name small{display:block;font-family:var(--mono);font-weight:400;font-size:.55rem;letter-spacing:.32em;color:var(--cool-ice);margin-top:3px}
+nav.links{display:flex;gap:30px}
+nav.links a{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;opacity:.8;position:relative;padding:4px 0;transition:opacity .2s}
+nav.links a:hover{opacity:1}
+nav.links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--heat);transition:width .25s}
+nav.links a:hover::after{width:100%}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;padding:13px 22px;border:1px solid transparent;cursor:pointer;transition:all .22s;white-space:nowrap}
+.btn-heat{background:var(--heat);color:#fff}
+.btn-heat:hover{background:var(--heat-deep);transform:translateY(-2px);box-shadow:0 8px 24px rgba(228,87,31,.35)}
+.btn-ghost{border-color:var(--line-light);color:var(--paper)}
+.btn-ghost:hover{border-color:var(--paper);background:rgba(255,255,255,.06)}
+.btn-ink{background:var(--ink);color:var(--paper)}
+.btn-ink:hover{background:var(--ink-3);transform:translateY(-2px);box-shadow:0 8px 24px rgba(20,27,35,.3)}
+@media(max-width:960px){nav.links{display:none}}
+.burger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:1px solid var(--line-light);padding:0 12px;height:44px;cursor:pointer;transition:border-color .2s}
+.burger:hover{border-color:var(--paper)}
+.burger span{display:block;width:20px;height:2px;background:var(--paper);transition:transform .25s,opacity .25s}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:960px){.burger{display:flex}}
+.call-short{display:none}
+@media(max-width:620px){
+  .call-full{display:none}
+  .call-short{display:inline}
+  .nav-cta{gap:10px}
+  .logo svg{width:34px;height:34px}
+  .logo-name{font-size:1.15rem}
+  .logo-name small{font-size:.48rem}
+}
+.mobile-menu{display:none;background:var(--ink)}
+.mobile-menu.open{display:block}
+.mobile-menu a{display:block;padding:16px clamp(20px,4vw,48px);font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(243,239,231,.85);border-top:1px solid var(--line-light);transition:color .2s,padding-left .2s}
+.mobile-menu a:hover{color:var(--heat);padding-left:calc(clamp(20px,4vw,48px) + 6px)}
+
+/* ---------- hero ---------- */
+.hero{background:var(--ink);color:var(--paper);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;
+background:
+ radial-gradient(900px 500px at 88% -10%,rgba(61,132,171,.34),transparent 60%),
+ radial-gradient(800px 560px at 2% 108%,rgba(228,87,31,.26),transparent 60%);}
+.hero-in{position:relative;padding:clamp(64px,9vw,120px) 0 0;display:grid;grid-template-columns:1.35fr .8fr;gap:48px}
+.hero h1{font-size:clamp(3.4rem,9.2vw,8.2rem);font-weight:900}
+.hero h1 .hot{color:var(--heat)}
+.hero h1 .cold{color:var(--cool-ice)}
+.hero h1 span{display:block}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--cool-ice);margin-bottom:26px;border:1px solid var(--line-light);padding:8px 14px}
+.kicker::before{content:"";width:22px;height:1px;background:var(--heat)}
+.hero-sub{max-width:520px;font-size:1.06rem;color:rgba(243,239,231,.75);margin:30px 0 38px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:64px}
+.hero-side{display:flex;flex-direction:column;justify-content:flex-end;gap:14px;padding-bottom:64px}
+.tag-card{border:1px solid var(--line-light);padding:18px 20px;backdrop-filter:blur(4px);background:rgba(255,255,255,.03);display:flex;gap:14px;align-items:center;transition:border-color .25s,transform .25s}
+.tag-card:hover{border-color:rgba(243,239,231,.4);transform:translateX(6px)}
+.tag-card svg{width:26px;height:26px;flex-shrink:0}
+.tag-card b{display:block;font-family:var(--display);font-size:1.05rem;text-transform:uppercase;letter-spacing:.03em}
+.tag-card span{font-size:.8rem;color:rgba(243,239,231,.6)}
+/* wind lines */
+.wind{position:absolute;right:-40px;top:10%;width:56%;height:80%;opacity:.5;pointer-events:none}
+.wind path{fill:none;stroke-width:1.4;stroke-linecap:round;stroke-dasharray:1200;stroke-dashoffset:1200;animation:draw 3.4s cubic-bezier(.6,0,.2,1) forwards}
+.wind path:nth-child(1){animation-delay:.2s}
+.wind path:nth-child(2){animation-delay:.45s}
+.wind path:nth-child(3){animation-delay:.7s}
+.wind path:nth-child(4){animation-delay:.95s}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media(max-width:960px){.hero-in{grid-template-columns:1fr}.hero-side{padding-bottom:48px}.wind{display:none}}
+/* reveal on load */
+.rise{opacity:0;transform:translateY(26px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
+.d1{animation-delay:.08s}.d2{animation-delay:.18s}.d3{animation-delay:.3s}.d4{animation-delay:.42s}.d5{animation-delay:.54s}
+@keyframes rise{to{opacity:1;transform:none}}
+
+/* ---------- ticker ---------- */
+.ticker{background:var(--heat);color:#fff;overflow:hidden;padding:12px 0;border-top:1px solid rgba(0,0,0,.15)}
+.ticker-track{display:flex;gap:0;width:max-content;animation:scroll 30s linear infinite}
+.ticker span{font-family:var(--display);font-weight:700;font-size:1.05rem;text-transform:uppercase;letter-spacing:.06em;padding:0 26px;white-space:nowrap;display:flex;align-items:center;gap:26px}
+.ticker span::after{content:"✦";font-size:.7rem;opacity:.7}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* ---------- stats ---------- */
+.stats{background:var(--bone);border-bottom:1px solid var(--line)}
+.stats-in{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:36px 28px;border-left:1px solid var(--line)}
+.stat:first-child{border-left:none}
+.stat b{font-family:var(--display);font-weight:800;font-size:clamp(2rem,3.4vw,2.9rem);display:block;line-height:1}
+.stat b i{font-style:normal;color:var(--heat)}
+.stat span{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,27,35,.55)}
+@media(max-width:760px){.stats-in{grid-template-columns:1fr 1fr}.stat:nth-child(3){border-left:none}.stat{border-top:1px solid var(--line)}.stat:nth-child(-n+2){border-top:none}}
+
+/* ---------- section scaffolding ---------- */
+section{padding:clamp(72px,9vw,128px) 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:clamp(40px,6vw,72px)}
+.sec-head h2{font-size:clamp(2.6rem,6vw,4.6rem);font-weight:900}
+.sec-head .mono{color:rgba(20,27,35,.5);margin-bottom:14px;display:block}
+.sec-head p{max-width:380px;color:rgba(20,27,35,.65);font-size:.95rem}
+.num{font-family:var(--mono);font-size:.72rem;color:var(--heat)}
+
+/* scroll reveal */
+.sr{opacity:0;transform:translateY(34px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.sr.on{opacity:1;transform:none}
+
+/* ---------- services ---------- */
+#services{background:var(--paper)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.svc{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:34px 30px 30px;position:relative;background:var(--paper);transition:background .3s;min-height:280px;display:flex;flex-direction:column}
+.svc:hover{background:var(--bone)}
+.svc::after{content:"";position:absolute;left:0;top:0;width:100%;height:3px;background:var(--heat);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.svc.cool-card::after{background:var(--cool)}
+.svc:hover::after{transform:scaleX(1)}
+.svc .num{display:block;margin-bottom:22px}
+.svc svg{width:34px;height:34px;margin-bottom:18px;stroke:var(--ink)}
+.svc h3{font-size:1.55rem;font-weight:800;margin-bottom:10px}
+.svc p{font-size:.88rem;color:rgba(20,27,35,.62);flex:1}
+.svc-tags{display:flex;gap:8px;margin-top:18px;flex-wrap:wrap}
+.svc-tags i{font-style:normal;font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);padding:4px 9px;color:rgba(20,27,35,.6)}
+.svc-tags i.hot{border-color:rgba(228,87,31,.4);color:var(--heat-deep)}
+@media(max-width:960px){.svc-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.svc-grid{grid-template-columns:1fr}}
+
+/* ---------- refrigeration band ---------- */
+.fridge{background:linear-gradient(135deg,#10202b,#173447 55%,#1d4a63);color:var(--paper);position:relative;overflow:hidden}
+.fridge::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 400px at 85% 20%,rgba(168,205,221,.18),transparent 60%)}
+.fridge-in{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(40px,6vw,90px);align-items:center}
+.fridge h2{font-size:clamp(2.4rem,5.4vw,4.2rem);font-weight:900;margin-bottom:22px}
+.fridge h2 em{font-style:normal;color:var(--cool-ice)}
+.fridge p{color:rgba(243,239,231,.72);margin-bottom:16px;max-width:520px}
+.fridge-list{list-style:none;margin:28px 0 36px;display:grid;gap:0}
+.fridge-list li{display:flex;align-items:center;gap:14px;padding:15px 0;border-bottom:1px solid var(--line-light);font-family:var(--mono);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase}
+.fridge-list li::before{content:"";width:14px;height:14px;flex-shrink:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 1v14M2 4.5l12 7M14 4.5l-12 7' stroke='%23a8cddd' stroke-width='1.4' stroke-linecap='round' fill='none'/%3E%3C/svg%3E") center/contain no-repeat}
+.temp-panel{border:1px solid var(--line-light);background:rgba(255,255,255,.04);backdrop-filter:blur(6px);padding:38px 34px;position:relative}
+.temp-panel .mono{color:var(--cool-ice)}
+.temp-big{font-family:var(--display);font-weight:900;font-size:clamp(4.5rem,8vw,7rem);line-height:1;margin:10px 0 4px}
+.temp-big sup{font-size:.35em;vertical-align:super;color:var(--cool-ice)}
+.temp-row{display:flex;justify-content:space-between;border-top:1px solid var(--line-light);padding:13px 0;font-size:.82rem}
+.temp-row b{font-family:var(--mono);font-weight:500;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(243,239,231,.55)}
+@media(max-width:900px){.fridge-in{grid-template-columns:1fr}}
+
+/* ---------- why ---------- */
+.why{background:var(--paper-2)}
+.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.why-card{background:var(--paper-2);padding:40px 36px;display:flex;gap:22px;transition:background .3s}
+.why-card:hover{background:var(--bone)}
+.why-card .big{font-family:var(--display);font-weight:900;font-size:3.4rem;line-height:1;color:transparent;-webkit-text-stroke:1.5px var(--heat);flex-shrink:0;width:70px}
+.why-card h3{font-size:1.5rem;font-weight:800;margin-bottom:8px}
+.why-card p{font-size:.9rem;color:rgba(20,27,35,.65)}
+@media(max-width:760px){.why-grid{grid-template-columns:1fr}}
+
+/* ---------- reviews ---------- */
+.reviews{background:var(--ink);color:var(--paper);position:relative;overflow:hidden}
+.reviews::before{content:"";position:absolute;inset:0;background:radial-gradient(800px 500px at 10% 0%,rgba(228,87,31,.14),transparent 55%)}
+.reviews .sec-head .mono,.reviews .sec-head p{color:rgba(243,239,231,.55)}
+.reviews .sec-head{position:relative}
+.rev-rail{position:relative;display:grid;grid-auto-flow:column;grid-auto-columns:min(420px,82vw);gap:20px;overflow-x:auto;padding:4px 4px 28px;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:var(--heat) transparent}
+.rev-rail::-webkit-scrollbar{height:4px}
+.rev-rail::-webkit-scrollbar-thumb{background:var(--heat)}
+.rev{scroll-snap-align:start;border:1px solid var(--line-light);background:rgba(255,255,255,.035);padding:32px 30px;display:flex;flex-direction:column;gap:18px;transition:transform .3s,border-color .3s}
+.rev:hover{transform:translateY(-6px);border-color:rgba(243,239,231,.35)}
+.stars{color:var(--heat);letter-spacing:4px;font-size:.95rem}
+.rev p{font-size:.95rem;color:rgba(243,239,231,.82);flex:1}
+.rev .who{font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cool-ice)}
+.rev-foot{position:relative;display:flex;gap:26px;align-items:center;margin-top:26px;flex-wrap:wrap}
+.rev-foot .mono{color:rgba(243,239,231,.5)}
+
+/* ---------- areas ---------- */
+.areas{background:var(--paper)}
+.areas-in{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,6vw,90px);align-items:start}
+.area-list{list-style:none;border-top:1px solid var(--line)}
+.area-list li{border-bottom:1px solid var(--line)}
+.area-list a{display:flex;justify-content:space-between;align-items:center;padding:22px 8px;font-family:var(--display);font-weight:800;font-size:clamp(1.6rem,3vw,2.3rem);text-transform:uppercase;transition:padding .25s,color .25s}
+.area-list a:hover{padding-left:22px;color:var(--heat)}
+.area-list a span{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;color:rgba(20,27,35,.5);font-weight:400}
+.area-list a::after{content:"→";font-family:var(--body);font-size:1.2rem;opacity:0;transition:opacity .25s}
+.area-list a:hover::after{opacity:1}
+.areas-note{border:1px solid var(--line);padding:34px 32px;background:var(--bone)}
+.areas-note h3{font-size:1.6rem;margin-bottom:12px}
+.areas-note p{font-size:.92rem;color:rgba(20,27,35,.65);margin-bottom:20px}
+
+/* ---------- financing ---------- */
+.pay{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pay-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:center}
+.pay h2{font-size:clamp(2.2rem,4.6vw,3.6rem);font-weight:900;margin-bottom:18px}
+.pay h2 em{font-style:normal;color:var(--heat)}
+.pay p{color:rgba(20,27,35,.68);font-size:.95rem;margin-bottom:16px}
+.chip-row{display:flex;flex-wrap:wrap;gap:10px}
+.chip{font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--ink);padding:9px 15px;background:var(--bone);transition:all .2s}
+.chip:hover{background:var(--ink);color:var(--paper)}
+@media(max-width:860px){.pay-in{grid-template-columns:1fr}}
+
+/* ---------- contact ---------- */
+.contact{background:var(--ink);color:var(--paper);position:relative;overflow:hidden}
+.contact::before{content:"";position:absolute;inset:0;background:
+ radial-gradient(700px 420px at 95% 100%,rgba(61,132,171,.25),transparent 60%),
+ radial-gradient(600px 400px at 0% 0%,rgba(228,87,31,.18),transparent 55%)}
+.contact-in{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,90px)}
+.contact h2{font-size:clamp(2.8rem,6vw,5rem);font-weight:900;margin-bottom:24px}
+.contact h2 em{font-style:normal;color:var(--heat)}
+.c-item{display:flex;gap:18px;padding:20px 0;border-bottom:1px solid var(--line-light)}
+.c-item svg{width:22px;height:22px;flex-shrink:0;margin-top:3px}
+.c-item b{font-family:var(--mono);font-weight:500;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(243,239,231,.5);display:block;margin-bottom:5px}
+.c-item a:hover{color:var(--cool-ice)}
+.c-item .val{font-size:1.05rem}
+form{display:flex;flex-direction:column;gap:16px;border:1px solid var(--line-light);background:rgba(255,255,255,.035);backdrop-filter:blur(6px);padding:clamp(26px,3.4vw,42px)}
+form .mono{color:var(--cool-ice);margin-bottom:6px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:flex;flex-direction:column;gap:7px;font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(243,239,231,.6)}
+input,select,textarea{font-family:var(--body);font-size:.95rem;color:var(--paper);background:rgba(255,255,255,.05);border:1px solid var(--line-light);padding:13px 14px;outline:none;transition:border-color .2s;border-radius:0;appearance:none}
+select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23a8cddd'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+select option{color:var(--ink)}
+input:focus,select:focus,textarea:focus{border-color:var(--heat)}
+textarea{resize:vertical;min-height:110px}
+@media(max-width:900px){.contact-in{grid-template-columns:1fr}.f-row{grid-template-columns:1fr}}
+
+/* ---------- footer ---------- */
+footer{background:#0e141b;color:var(--paper);padding:64px 0 34px;border-top:1px solid var(--line-light)}
+.foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:54px}
+.foot-top h4{font-family:var(--mono);font-weight:500;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(243,239,231,.45);margin-bottom:18px}
+.foot-top ul{list-style:none;display:grid;gap:10px}
+.foot-top ul a{font-size:.88rem;color:rgba(243,239,231,.75);transition:color .2s}
+.foot-top ul a:hover{color:var(--heat)}
+.foot-brand p{font-size:.85rem;color:rgba(243,239,231,.55);max-width:300px;margin-top:14px}
+.foot-bottom{border-top:1px solid var(--line-light);padding-top:26px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.foot-bottom .mono{font-size:.62rem;color:rgba(243,239,231,.58)}
+.socials{display:flex;gap:18px}
+.socials a{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(243,239,231,.6);transition:color .2s}
+.socials a:hover{color:var(--cool-ice)}
+@media(max-width:860px){.foot-top{grid-template-columns:1fr 1fr}}
+
+/* ---------- emergency float ---------- */
+.sos{position:fixed;bottom:22px;right:22px;z-index:200;display:flex;align-items:center;gap:10px;background:var(--heat);color:#fff;padding:14px 20px;font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;box-shadow:0 12px 32px rgba(228,87,31,.4);transition:transform .25s}
+.sos:hover{transform:translateY(-3px)}
+.sos .dot{width:8px;height:8px;border-radius:50%;background:#fff;animation:pulse 1.6s infinite}
+</style>
+</head>
+<body>
+
+<!-- top strip -->
+<div class="strip">
+  <div class="wrap strip-in">
+    <span class="mono"><span class="dot"></span>Emergency heating &amp; cooling service available</span>
+    <div class="strip-right">
+      <span class="mono">Mon&ndash;Fri 7:00AM&ndash;7:00PM &middot; Weekends by appt</span>
+      <a class="mono" href="mailto:service@crosswindmechanical.com">service@crosswindmechanical.com</a>
+    </div>
+  </div>
+</div>
+
+<!-- nav -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#top">
+      <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <path d="M6 16h22a6 6 0 1 0-6-6" stroke="#a8cddd" stroke-width="3" stroke-linecap="round"/>
+        <path d="M6 25h32a6 6 0 1 1-6 6" stroke="#e4571f" stroke-width="3" stroke-linecap="round"/>
+        <path d="M6 34h16a5 5 0 1 1-5 5" stroke="#f3efe7" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <span class="logo-name">Crosswind<br>Mechanical<small>HTG &middot; CLG &middot; REFRIGERATION</small></span>
+    </a>
+    <nav class="links">
+      <a href="#services">Services</a>
+      <a href="#refrigeration">Refrigeration</a>
+      <a href="#why">Why Us</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#areas">Service Areas</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="btn btn-heat" href="tel:7343228052">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span class="call-full">(734) 322-8052</span><span class="call-short">Call</span>
+      </a>
+    </div>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+    <a href="#services">Services</a>
+    <a href="#refrigeration">Refrigeration</a>
+    <a href="#why">Why Us</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#areas">Service Areas</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- hero -->
+<section class="hero" id="top" style="padding:0">
+  <svg class="wind" viewBox="0 0 600 500" aria-hidden="true">
+    <path d="M-20 90 C160 70 240 150 380 120 S600 40 660 80" stroke="#a8cddd"/>
+    <path d="M-20 200 C140 180 300 260 440 220 S620 150 680 190" stroke="#3d84ab"/>
+    <path d="M-20 320 C180 300 260 380 400 340 S600 260 660 300" stroke="#e4571f"/>
+    <path d="M-20 430 C150 410 310 470 450 430 S620 370 680 410" stroke="rgba(243,239,231,.5)"/>
+  </svg>
+  <div class="wrap hero-in">
+    <div>
+      <span class="kicker rise d1">Southeast Michigan &middot; Family Owned &middot; Licensed &amp; Certified</span>
+      <h1>
+        <span class="rise d1">Heat when</span>
+        <span class="rise d2">you need <span class="hot">heat.</span></span>
+        <span class="rise d3">Cold when</span>
+        <span class="rise d4">you need <span class="cold">cold.</span></span>
+      </h1>
+      <p class="hero-sub rise d4">Crosswind Mechanical is Southeast Michigan’s full-service heating, cooling, and commercial refrigeration contractor. Certified technicians, honest pricing, and no tacked-on charges. Just work done right, the first time.</p>
+      <div class="hero-actions rise d5">
+        <a class="btn btn-heat" href="tel:7343228052">Call (734) 322-8052</a>
+        <a class="btn btn-ghost" href="#contact">Request Free Consultation</a>
+      </div>
+    </div>
+    <div class="hero-side">
+      <div class="tag-card rise d3">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#e4571f" stroke-width="1.8"><path d="M12 2v10m0 0a4 4 0 1 0 4 4"/><circle cx="12" cy="16" r="7"/></svg>
+        <div><b>Emergency Repair</b><span>Fast response when systems fail</span></div>
+      </div>
+      <div class="tag-card rise d4">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#a8cddd" stroke-width="1.8"><path d="M12 2v20M4 6l16 12M20 6L4 18M2 12h20"/></svg>
+        <div><b>Commercial Refrigeration</b><span>Walk-in coolers, freezers &amp; ice machines</span></div>
+      </div>
+      <div class="tag-card rise d5">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#f3efe7" stroke-width="1.8"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
+        <div><b>Residential + Commercial</b><span>Homes, restaurants, shops &amp; facilities</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>Furnaces</span><span>Air Conditioning</span><span>Heat Pumps</span><span>Boilers</span><span>Walk-In Coolers</span><span>Walk-In Freezers</span><span>Ice Machines</span><span>Water Heaters</span><span>Air Ducts</span><span>Indoor Air Quality</span><span>Emergency Service</span>
+      <span>Furnaces</span><span>Air Conditioning</span><span>Heat Pumps</span><span>Boilers</span><span>Walk-In Coolers</span><span>Walk-In Freezers</span><span>Ice Machines</span><span>Water Heaters</span><span>Air Ducts</span><span>Indoor Air Quality</span><span>Emergency Service</span>
+    </div>
+  </div>
+</section>
+
+<!-- stats -->
+<div class="stats">
+  <div class="wrap stats-in">
+    <div class="stat sr"><b>24<i>/</i>7</b><span>Emergency availability</span></div>
+    <div class="stat sr"><b>100<i>%</i></b><span>Family owned &amp; operated</span></div>
+    <div class="stat sr"><b>5<i>.0</i></b><span>Star average from customers</span></div>
+    <div class="stat sr"><b>$<i>0</i></b><span>Consultations, always free</span></div>
+  </div>
+</div>
+
+<!-- services -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head sr">
+      <div>
+        <span class="mono num">01 / Full-Service HVAC</span>
+        <h2>Every system.<br>Every season.</h2>
+      </div>
+      <p>Installation, maintenance, and repair for residential and commercial properties across Southeast Michigan. If it heats, cools, or freezes, we service it.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc sr">
+        <span class="num">S.01</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M14 4v10.5a4 4 0 1 1-4-3.9V4a2 2 0 1 1 4 0z"/><path d="M12 8v6"/></svg>
+        <h3>Heating &amp; Furnaces</h3>
+        <p>Furnace installation, maintenance, and repair that keeps Michigan winters outside where they belong. Emergency heating repair available around the clock.</p>
+        <div class="svc-tags"><i>Residential</i><i>Commercial</i><i class="hot">24/7 Emergency</i></div>
+      </div>
+      <div class="svc cool-card sr">
+        <span class="num">S.02</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 2v20M4.2 7l15.6 10M19.8 7L4.2 17M2 12h20"/></svg>
+        <h3>Air Conditioning</h3>
+        <p>When the weather heats up, cooling down is a must. AC maintenance, repairs, and full installations, with emergency cooling service when you need it most.</p>
+        <div class="svc-tags"><i>Residential</i><i>Commercial</i><i class="hot">24/7 Emergency</i></div>
+      </div>
+      <div class="svc sr">
+        <span class="num">S.03</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 14a8 8 0 0 1 16 0M12 6V3M5 8 3 6M19 8l2-2M2 18h20M6 22h12"/></svg>
+        <h3>Heat Pumps</h3>
+        <p>Year-round comfort from one system. Our trained technicians handle heat pump repair, maintenance, and new installations for homes and businesses.</p>
+        <div class="svc-tags"><i>Residential</i><i>Commercial</i></div>
+      </div>
+      <div class="svc sr">
+        <span class="num">S.04</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 7h6M9 11h6M12 15v3"/></svg>
+        <h3>Boilers</h3>
+        <p>Residential and commercial boiler service with safety and efficiency first. Installation, tune-ups, and repairs from certified professionals.</p>
+        <div class="svc-tags"><i>Residential</i><i>Commercial</i></div>
+      </div>
+      <div class="svc cool-card sr">
+        <span class="num">S.05</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M4 10h16M8 6v0M8 14v0"/></svg>
+        <h3>Commercial Refrigeration</h3>
+        <p>Walk-in coolers, walk-in freezers, and ice machines kept at temperature so your product never spoils and your business never stops.</p>
+        <div class="svc-tags"><i>Commercial</i><i class="hot">Priority Service</i></div>
+      </div>
+      <div class="svc sr">
+        <span class="num">S.06</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M3 12c3-6 6 6 9 0s6 6 9 0M3 19c3-6 6 6 9 0s6 6 9 0M3 5c3-6 6 6 9 0s6 6 9 0"/></svg>
+        <h3>Indoor Air Quality</h3>
+        <p>Air quality testing plus air duct and vent cleaning, so the air moving through your building is as healthy as it is comfortable.</p>
+        <div class="svc-tags"><i>Residential</i><i>Commercial</i></div>
+      </div>
+      <div class="svc sr">
+        <span class="num">S.07</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 3v4M12 3a7 7 0 0 1 7 7v8a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3v-8a7 7 0 0 1 7-7zM8 14h8"/></svg>
+        <h3>Water Heaters</h3>
+        <p>From failing tanks to fresh installations, we keep the hot water flowing with prompt, professional water heater service.</p>
+        <div class="svc-tags"><i>Residential</i><i>Commercial</i></div>
+      </div>
+      <div class="svc sr">
+        <span class="num">S.08</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4l-6 6V21h3.3l6-6a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.7-2.7 2.6-2.6z"/></svg>
+        <h3>HVAC Maintenance</h3>
+        <p>Routine maintenance visits that catch small problems before they become expensive ones. Safety, reliability, and efficiency, checked and verified.</p>
+        <div class="svc-tags"><i>Residential</i><i>Commercial</i></div>
+      </div>
+      <div class="svc sr">
+        <span class="num">S.09</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5zM3 7l9 5m0 0 9-5m-9 5v10"/></svg>
+        <h3>HVAC Installations</h3>
+        <p>Complete heating, cooling, and ventilation system installs, engineered for your property and sized right the first time.</p>
+        <div class="svc-tags"><i>Residential</i><i>Commercial</i><i class="hot">Financing Available</i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- refrigeration band -->
+<section class="fridge" id="refrigeration">
+  <div class="wrap fridge-in">
+    <div class="sr">
+      <span class="mono num" style="color:#a8cddd">02 / Commercial Cold</span>
+      <h2 style="margin-top:14px">Your product stays <em>cold.</em> Your business stays <em>open.</em></h2>
+      <p>Restaurants, grocers, bars, and food service operations across Southeast Michigan trust Crosswind to keep their refrigeration at temperature. When a walk-in fails at 9PM on a Friday, we are the call that saves the inventory.</p>
+      <ul class="fridge-list">
+        <li>Walk-in cooler service &amp; repair</li>
+        <li>Walk-in freezer service &amp; repair</li>
+        <li>Ice machine service</li>
+        <li>Preventative maintenance programs</li>
+        <li>Emergency response for failures</li>
+      </ul>
+      <a class="btn btn-heat" href="tel:7343228052">Refrigeration down? Call now</a>
+    </div>
+    <div class="temp-panel sr">
+      <span class="mono">Holding Temperature / Verified</span>
+      <div class="temp-big" id="tempTicker">-10<sup>°F</sup></div>
+      <div class="temp-row"><b>Walk-in freezer</b><span>-10°F to 0°F</span></div>
+      <div class="temp-row"><b>Walk-in cooler</b><span>35°F to 38°F</span></div>
+      <div class="temp-row"><b>Ice machine</b><span>Clear, full production</span></div>
+      <div class="temp-row"><b>Response</b><span>Emergency available</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- why -->
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="sec-head sr">
+      <div>
+        <span class="mono num">03 / The Crosswind Difference</span>
+        <h2>Straight talk.<br>Fair prices.</h2>
+      </div>
+      <p>We are locally owned and locally staffed. We do not believe in outrageous prices or overhead fees. We believe in giving you our best without the tacked-on charges.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card sr"><span class="big">01</span><div><h3>Family Owned</h3><p>A local business run by people who answer their own phone and stand behind their own work. Friendly service and integrity, every visit.</p></div></div>
+      <div class="why-card sr"><span class="big">02</span><div><h3>Licensed &amp; Certified</h3><p>Certified HVAC contractors with the training, skills, and extensive knowledge to do the job safely and to code.</p></div></div>
+      <div class="why-card sr"><span class="big">03</span><div><h3>Free Consultations</h3><p>Tell us what is going on and we will tell you what it takes to fix it. No pressure, no obligation, no consultation fee.</p></div></div>
+      <div class="why-card sr"><span class="big">04</span><div><h3>Emergency Ready</h3><p>Heat out in January? Cooler down in July? Emergency heating, cooling, and refrigeration service is available when you need it.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- reviews -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="sec-head sr">
+      <div>
+        <span class="mono num">04 / Word of Mouth</span>
+        <h2>Our customers<br>say it best.</h2>
+      </div>
+      <p>Real reviews from homeowners and businesses across Southeast Michigan. Five stars, every one of them.</p>
+    </div>
+    <div class="rev-rail sr">
+      <div class="rev"><span class="stars">★★★★★</span><p>“They did a great job fixing my furnace. Reliable, informative, reasonably priced, and quick to come out and help. Zach did a great job explaining the issue and fixing it promptly. Would hire again.”</p><span class="who">James X.</span></div>
+      <div class="rev"><span class="stars">★★★★★</span><p>“Very quick to respond to my service request. The technician was professional and knowledgeable in fixing the problem and able to explain what was wrong. I highly recommend Crosswind Mechanical. Also, reasonably priced.”</p><span class="who">Michelle G.</span></div>
+      <div class="rev"><span class="stars">★★★★★</span><p>“We called this company since they are a locally owned business near our home and couldn’t be more pleased. Zach was extremely thorough, informative, and professional. The pricing was very reasonable. Just an overall great experience.”</p><span class="who">Nance C.</span></div>
+      <div class="rev"><span class="stars">★★★★★</span><p>“Friendly and professional team that was prompt and recently installed a hot water heater! Would definitely recommend to anyone looking for HVAC or water heater services.”</p><span class="who">Jake D.</span></div>
+      <div class="rev"><span class="stars">★★★★★</span><p>“Had an issue with an old thermostat, Kenji came out within 24 hours and had a new one set up in a timely manner. 100% professional.”</p><span class="who">Ryan S.</span></div>
+      <div class="rev"><span class="stars">★★★★★</span><p>“Simply the best when it comes to all things HVAC. I can’t recommend Eric and his team enough! Give them a call if you need help with anything HVAC!”</p><span class="who">Zach S.</span></div>
+      <div class="rev"><span class="stars">★★★★★</span><p>“Great job by the Crosswind team, very friendly and professional. I had a great experience. Try them, you won’t be disappointed.”</p><span class="who">Azhar K.</span></div>
+    </div>
+    <div class="rev-foot sr">
+      <span class="mono">5.0 average rating</span>
+      <span class="mono">Reviews on Google &middot; Yelp &middot; BBB</span>
+      <a class="btn btn-ghost" href="#contact" style="margin-left:auto">Become the next review</a>
+    </div>
+  </div>
+</section>
+
+<!-- areas -->
+<section class="areas" id="areas">
+  <div class="wrap areas-in">
+    <div class="sr">
+      <span class="mono num">05 / Where We Work</span>
+      <h2 style="font-size:clamp(2.4rem,5vw,4rem);margin-top:14px">Proudly serving Southeast Michigan</h2>
+      <p style="margin-top:20px;color:rgba(20,27,35,.65);max-width:400px">Headquartered in Allen Park and on the road across the region every day. Do not see your city? Call us. If we can reach you, we will help you.</p>
+    </div>
+    <div>
+      <ul class="area-list sr">
+        <li><a href="tel:7343228052">Allen Park <span>Home Base</span></a></li>
+        <li><a href="tel:7343228052">Ann Arbor <span>Full Service</span></a></li>
+        <li><a href="tel:7343228052">Monroe <span>Full Service</span></a></li>
+        <li><a href="tel:7343228052">New Boston <span>Full Service</span></a></li>
+        <li><a href="tel:7343228052">Downriver &amp; Beyond <span>Call to Confirm</span></a></li>
+      </ul>
+      <div class="areas-note sr" style="margin-top:26px">
+        <h3>Emergency? We move fast.</h3>
+        <p>Weekend and after-hours appointments are available. Emergency heating, cooling, and refrigeration calls get priority dispatch.</p>
+        <a class="btn btn-ink" href="tel:7343228052">Call (734) 322-8052</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- financing / payment -->
+<section class="pay">
+  <div class="wrap pay-in">
+    <div class="sr">
+      <span class="mono num">06 / Easy To Work With</span>
+      <h2 style="margin-top:14px">Fair pricing. <em>Flexible payment.</em></h2>
+      <p>A new system is a big decision. We make paying for it simple: financing is available through Synchrony Bank, and we accept just about every way you would want to pay.</p>
+      <a class="btn btn-ink" href="#contact">Ask about financing</a>
+    </div>
+    <div class="sr">
+      <h4 class="mono" style="margin-bottom:16px;color:rgba(20,27,35,.55)">Accepted payment methods</h4>
+      <div class="chip-row">
+        <span class="chip">Cash</span><span class="chip">Check</span><span class="chip">Visa</span><span class="chip">Mastercard</span><span class="chip">Amex</span><span class="chip">Discover</span><span class="chip">Venmo</span><span class="chip">Zelle</span><span class="chip">Cash App</span><span class="chip">Synchrony Financing</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- contact -->
+<section class="contact" id="contact">
+  <div class="wrap contact-in">
+    <div class="sr">
+      <span class="mono num">07 / Get In Touch</span>
+      <h2 style="margin-top:16px">Let’s get you <em>comfortable.</em></h2>
+      <div class="c-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#e4571f" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <div><b>Phone</b><a class="val" href="tel:7343228052">(734) 322-8052</a></div>
+      </div>
+      <div class="c-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#a8cddd" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6L22 7"/></svg>
+        <div><b>Email</b><a class="val" href="mailto:service@crosswindmechanical.com">service@crosswindmechanical.com</a></div>
+      </div>
+      <div class="c-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#e4571f" stroke-width="1.8"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div><b>Address</b><span class="val">10551 Allen Rd, Allen Park, MI 48101</span></div>
+      </div>
+      <div class="c-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#a8cddd" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <div><b>Hours</b><span class="val">Mon&ndash;Fri 7:00AM&ndash;7:00PM<br>Sat&ndash;Sun by appointment &middot; Emergency service available</span></div>
+      </div>
+    </div>
+    <form class="sr" id="quoteForm">
+      <span class="mono">Request a free consultation</span>
+      <div class="f-row">
+        <label>Name<input type="text" name="name" required placeholder="Your name"></label>
+        <label>Phone<input type="tel" name="phone" required placeholder="(xxx) xxx-xxxx"></label>
+      </div>
+      <label>Email<input type="email" name="email" placeholder="you@email.com"></label>
+      <div class="f-row">
+        <label>Service Needed
+          <select name="service">
+            <option>Heating / Furnace</option>
+            <option>Air Conditioning</option>
+            <option>Heat Pump</option>
+            <option>Boiler</option>
+            <option>Commercial Refrigeration</option>
+            <option>Water Heater</option>
+            <option>Indoor Air Quality</option>
+            <option>New Installation</option>
+            <option>Maintenance</option>
+            <option>Emergency Repair</option>
+          </select>
+        </label>
+        <label>Property Type
+          <select name="property">
+            <option>Residential</option>
+            <option>Commercial</option>
+          </select>
+        </label>
+      </div>
+      <label>What’s going on?<textarea name="message" placeholder="Tell us what you’re seeing (or hearing, or smelling)…"></textarea></label>
+      <button class="btn btn-heat" type="submit" style="justify-content:center">Send Request</button>
+      <span class="mono" style="font-size:.58rem;color:rgba(243,239,231,.6)">Or skip the form: call (734) 322-8052</span>
+    </form>
+  </div>
+</section>
+
+<!-- footer -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="logo" href="#top">
+          <svg viewBox="0 0 48 48" fill="none" width="36" height="36" aria-hidden="true">
+            <path d="M6 16h22a6 6 0 1 0-6-6" stroke="#a8cddd" stroke-width="3" stroke-linecap="round"/>
+            <path d="M6 25h32a6 6 0 1 1-6 6" stroke="#e4571f" stroke-width="3" stroke-linecap="round"/>
+            <path d="M6 34h16a5 5 0 1 1-5 5" stroke="#f3efe7" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          <span class="logo-name" style="font-size:1.2rem">Crosswind Mechanical</span>
+        </a>
+        <p>Southeast Michigan’s family-owned heating, cooling, and refrigeration service provider. Licensed, certified, and easy to reach.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Heating &amp; Furnaces</a></li>
+          <li><a href="#services">Air Conditioning</a></li>
+          <li><a href="#services">Heat Pumps &amp; Boilers</a></li>
+          <li><a href="#refrigeration">Commercial Refrigeration</a></li>
+          <li><a href="#services">Indoor Air Quality</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#why">Why Crosswind</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#areas">Service Areas</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:7343228052">(734) 322-8052</a></li>
+          <li><a href="mailto:service@crosswindmechanical.com">service@crosswindmechanical.com</a></li>
+          <li><a href="#contact">10551 Allen Rd, Allen Park, MI 48101</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span class="mono">© 2026 Crosswind Mechanical. All rights reserved. BBB Accredited, A rating.</span>
+      <div class="socials">
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Google Reviews">Google</a>
+        <a href="#" aria-label="Yelp">Yelp</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" aria-label="BBB">BBB</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a class="sos" href="tel:7343228052"><span class="dot"></span>Emergency? Call Now</a>
+
+<script>
+// mobile menu
+const burger = document.getElementById('burger');
+const mobileMenu = document.getElementById('mobileMenu');
+burger.addEventListener('click',()=>{
+  const open = mobileMenu.classList.toggle('open');
+  burger.classList.toggle('open',open);
+  burger.setAttribute('aria-expanded',open);
+  burger.setAttribute('aria-label',open?'Close menu':'Open menu');
+});
+mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  mobileMenu.classList.remove('open');
+  burger.classList.remove('open');
+  burger.setAttribute('aria-expanded','false');
+}));
+
+// scroll reveal
+const io = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target);} });
+},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.sr').forEach(el=>io.observe(el));
+
+// staggered reveal inside grids
+document.querySelectorAll('.svc-grid,.why-grid,.rev-rail,.stats-in').forEach(grid=>{
+  [...grid.children].forEach((c,i)=>c.style.transitionDelay=(i*70)+'ms');
+});
+
+// temperature ticker flicker
+const temp = document.getElementById('tempTicker');
+if(temp){
+  const vals = ['-10','-9','-10','-11','-10'];
+  let i=0;
+  setInterval(()=>{ i=(i+1)%vals.length; temp.innerHTML = vals[i]+'<sup>°F</sup>'; },2600);
+}
+
+// quote form -> opens email compose prefilled (no backend required)
+document.getElementById('quoteForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const f = new FormData(e.target);
+  const body = encodeURIComponent(
+    `Name: ${f.get('name')}\nPhone: ${f.get('phone')}\nEmail: ${f.get('email')}\nService: ${f.get('service')}\nProperty: ${f.get('property')}\n\n${f.get('message')}`
+  );
+  const subject = encodeURIComponent(`Consultation Request: ${f.get('service')} (${f.get('property')})`);
+  window.location.href = `mailto:service@crosswindmechanical.com?subject=${subject}&body=${body}`;
+});
+</script>
+</body>
+</html>
