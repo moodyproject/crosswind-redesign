@@ -116,7 +116,14 @@ background:
 .hero h1 .cold{color:var(--cool-ice)}
 .hero h1 span{display:block}
 .kicker{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--cool-ice);margin-bottom:26px;border:1px solid var(--line-light);padding:8px 14px}
-.kicker::before{content:"";width:22px;height:1px;background:var(--heat)}
+.kicker::before{content:"";width:22px;height:1px;background:var(--heat);flex-shrink:0}
+.kicker span+span::before{content:"·";margin-right:10px;color:var(--heat)}
+@media(max-width:520px){
+  .kicker{flex-direction:column;align-items:flex-start;gap:6px;padding:12px 14px}
+  .kicker::before{display:none}
+  .kicker span+span::before{content:"";display:none}
+  .kicker span{border-left:2px solid var(--heat);padding-left:10px}
+}
 .hero-sub{max-width:520px;font-size:1.06rem;color:rgba(243,239,231,.75);margin:30px 0 38px}
 .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:64px}
 .hero-side{display:flex;flex-direction:column;justify-content:flex-end;gap:14px;padding-bottom:64px}
@@ -163,6 +170,7 @@ section{padding:clamp(72px,9vw,128px) 0}
 .sec-head .mono{color:rgba(20,27,35,.5);margin-bottom:14px;display:block}
 .sec-head p{max-width:380px;color:rgba(20,27,35,.65);font-size:.95rem}
 .num{font-family:var(--mono);font-size:.72rem;color:var(--heat)}
+@media(max-width:760px){.sec-head{flex-direction:column;align-items:flex-start;gap:18px}.sec-head p{max-width:none}}
 
 /* scroll reveal */
 .sr{opacity:0;transform:translateY(34px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
@@ -242,6 +250,7 @@ section{padding:clamp(72px,9vw,128px) 0}
 .area-list a:hover::after{opacity:1}
 .areas-note{border:1px solid var(--line);padding:34px 32px;background:var(--bone)}
 .areas-note h3{font-size:1.6rem;margin-bottom:12px}
+@media(max-width:860px){.areas-in{grid-template-columns:1fr}}
 .areas-note p{font-size:.92rem;color:rgba(20,27,35,.65);margin-bottom:20px}
 
 /* ---------- financing ---------- */
@@ -293,6 +302,8 @@ footer{background:#0e141b;color:var(--paper);padding:64px 0 34px;border-top:1px 
 .socials a{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(243,239,231,.6);transition:color .2s}
 .socials a:hover{color:var(--cool-ice)}
 @media(max-width:860px){.foot-top{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.foot-top{grid-template-columns:1fr;gap:34px}.foot-brand p{max-width:none}}
+.foot-top ul a{overflow-wrap:anywhere}
 
 /* ---------- emergency float ---------- */
 .sos{position:fixed;bottom:22px;right:22px;z-index:200;display:flex;align-items:center;gap:10px;background:var(--heat);color:#fff;padding:14px 20px;font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;box-shadow:0 12px 32px rgba(228,87,31,.4);transition:transform .25s}
@@ -362,7 +373,7 @@ footer{background:#0e141b;color:var(--paper);padding:64px 0 34px;border-top:1px 
   </svg>
   <div class="wrap hero-in">
     <div>
-      <span class="kicker rise d1">Southeast Michigan &middot; Family Owned &middot; Licensed &amp; Certified</span>
+      <span class="kicker rise d1"><span>Southeast Michigan</span><span>Family Owned</span><span>Licensed &amp; Certified</span></span>
       <h1>
         <span class="rise d1">Heat when</span>
         <span class="rise d2">you need <span class="hot">heat.</span></span>
